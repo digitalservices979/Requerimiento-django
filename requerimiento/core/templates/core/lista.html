@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+<div class="container mt-5 col-6">
+	<ul class="list-group">
+		{% if salones %}
+		    {% for salon in salones %}
+		    	<li class="list-group-item">{{salon.nombre}}</li>
+		    {% endfor %}  
+		{% endif %}
+	  	{% if mensaje %}
+	  	    <p class="muted">{{mensaje}}</p>
+	  	
+	  	{% endif %}
+	</ul>
+</div>
+{% endblock %}

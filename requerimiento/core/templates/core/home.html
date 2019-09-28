@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+<div class="container">
+  <div style="padding-top:50px; text-align:center;">
+    <h1>Salones</h1>
+    <p class="lead">Encuentra los salones según sus directores!!!</p>
+  </div> 
+    <div class="container col-6">
+        <form action="{% url 'lista' %}" method="get">
+          <input class="form-control mr-sm-2" name="nombre_director" id="buscador" type="text" placeholder="Nombre Director" aria-label="Search">
+          <a href="{% url 'lista' %}"><button class="btn btn-info my-2 my-sm-4 w-100">Search</button></a>
+        </form>    
+    </div>
+  <div class="row mt-5">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+  
+
+{% endblock %}
